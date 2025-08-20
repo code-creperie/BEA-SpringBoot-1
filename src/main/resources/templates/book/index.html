@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layouts/app :: head(${title})"></head>
+<body>
+    <div th:replace="layouts/app :: header(${subtitle})"></div>
+    <div class="container my-4">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+            <div th:each="book : ${books}" class="col">
+                <div class="p-4 border rounded shadow h-100 d-flex flex-column align-items-center">
+                    <div class="display-1 mb-2">📔</div>
+                    <a th:href="@{'/books/' + ${book.id}}" th:text="${book.name}"
+                        class="mt-auto w-100 text-center py-2 text-white bg-success rounded text-decoration-none fw-semibold hover-shadow">
+                        <!-- Book Name -->
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div th:replace="layouts/app :: footer"></div>
+</body>
+</html>

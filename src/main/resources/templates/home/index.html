@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!-- Insert head fragment from layouts/app.html, passing a custom title -->
+
+<head th:replace="layouts/app :: head(${title})"></head>
+
+<body>
+    <!-- Insert header fragment from layouts/app.html, passing a custom subtitle -->
+    <div th:replace="layouts/app :: header(${subtitle})"></div>
+
+    <div class="container">
+        <p class="fs-5" th:text="${description}"></p>
+    </div>
+
+    <!-- Insert footer fragment from layouts/app.html -->
+    <div th:replace="layouts/app :: footer"></div>
+</body>
+</html>

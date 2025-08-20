@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="layouts/app :: head(${title})"></head>
+<body>
+    <div th:replace="layouts/app :: header(${subtitle})"></div>
+
+    <div class="container">
+        <p class="fs-5" th:text="${description}"></p>
+        <p class="fs-5" th:text="${author}"></p>
+    </div>
+</div>
+<div th:replace="layouts/app :: footer"></div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layouts/app :: head(${title})"></head>
+<body>
+    <div th:replace="layouts/app :: header(${subtitle})"></div>
+    <div class="container my-4">
+        <div class="d-flex flex-column flex-md-row bg-white shadow rounded overflow-hidden">
+            <div class="w-100 w-md-25 d-flex justify-content-center align-items-center p-4">
+                <div class="display-1 mb-2">📔</div>
+            </div>
+            <div class="w-100 w-md-75 p-4">
+                <h2 class="fs-2 fw-bold text-dark mb-3" th:text="${book.name}">
+                    Book Name
+                </h2>
+                <p class="text-muted" th:text="${book.description}">
+                    Book Description
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div th:replace="layouts/app :: footer"></div>
+</body>
+</html>
